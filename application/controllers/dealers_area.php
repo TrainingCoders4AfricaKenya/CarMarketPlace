@@ -17,15 +17,17 @@ class Dealers_area extends CI_Controller{
 		
 		if (!isset($is_logged_in) || $is_logged_in != true)
 		{
-			//NEVER ECHO FROM CONTROLLER, LOAD FROM A VIEW
+			/*NEVER ECHO FROM CONTROLLER, LOAD FROM A VIEW
 			echo 'You don\'t have permision to access this page. <a href="../dealer_login/dealer_login">LOGIN </a> ';
-			die();
-		}
-		
+			die(); */
+		}		
 	}
 	
 	public function Dealer_area()
 	{
+		$this->load->model('dealer_model');
+		$data['query'] = $this->dealer_model->get_individual();
+		
 		$data['main_content'] = 'dealer/dealer_area'; //we are lading view from our templates
 		$this->load->view('includes/template', $data);
 	}

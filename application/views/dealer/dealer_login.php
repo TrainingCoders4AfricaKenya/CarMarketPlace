@@ -7,6 +7,7 @@
 		echo form_password('password', 'Password');
 		echo form_submit('submit', 'Login');
 		echo anchor('dealer_login/register', 'Create Account');	
+	 
 	?>
 </div>		
 	

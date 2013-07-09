@@ -11,7 +11,8 @@ class dealer_model extends CI_Model{
 	
 	public function get_individual($id)
 	{
-		
+		$query = $this->db->get('Dealer');
+		return $query->result();
 	}
 		
 	public function update_record($data)

@@ -24,7 +24,7 @@ class Dealer_login extends CI_Controller{
 				'is_logged_in' => TRUE
 			);
 			$this->session->set_userdata($data); //set_userdata is appending info to the session 
-			redirect('dealers_area/dealer_area');
+			redirect('dealers_area/is_logged_in');
 		}
 		else {
 			echo "error in validation";

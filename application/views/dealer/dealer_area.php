@@ -1,7 +1,16 @@
 <div id="member">
-	<?php $username = $this->session->userdata('username');
+	<?php $id = $this->session->userdata('username');
 			  //var_dump($this->session->userdata());
-			  echo "welcome " . $username;
+			  echo "welcome " . $id;
 		?>
 </div>
-
+<div>
+	<?php
+	foreach($query as $row)
+		{
+		  print $row->DealerID;
+		  print $row->username;
+		  print "<br>";
+		}
+?>
+</div>
